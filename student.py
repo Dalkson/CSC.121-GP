@@ -1,3 +1,9 @@
+#
+# Group 4
+# 4/18/23
+# Defines 3 functions. These are the main functions for working with courses a student is in.
+#
+
 def add_course(student, courses):  # Pass in student object and courses dictionary.
     course_name = input("Enter course you want to add: ")
     # if the course is not in the dictionary, full, or has already been enrolled in by the student,

@@ -1,3 +1,10 @@
+#
+# Group 4
+# 4/18/23
+# This is where the main loop of the program is. First data is initializes, Then a login loop is started,
+# then the options loop is started.
+#
+
 from billing import display_hours_and_bill, calculate_hours_and_bill
 from classes import Student, Course
 from student import add_course, drop_course, list_courses
@@ -34,9 +41,13 @@ def main():
     # main loop
     while True:
         student = login(students)
+        # choices loop
         while True:
-            choice = input("1. Add course\n2. Drop course\n3. List course\n4. Display bill\n5. Quit\n Choice: ")
+            choice = input("Enter 1 to add course, 2 to drop course, 3 to list courses, 4 to show bill, 0 to exit: ")
+            # instead of using if else we use match case. This makes the code easier to read and follow.
             match choice:
+                case '0':
+                    break
                 case '1':
                     add_course(student, courses)
                 case '2':
@@ -46,8 +57,6 @@ def main():
                 case '4':
                     hours, cost = calculate_hours_and_bill(student, courses)
                     display_hours_and_bill(hours, cost)
-                case '5':
-                    break
                 case _:
                     print('Invalid choice, please try again.')
             print()

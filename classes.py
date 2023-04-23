@@ -1,4 +1,10 @@
-# only simple classes needed. We modify the data outside the class.
+#
+# Group 4
+# 4/18/23
+# Defines classes that will be used to store data for students and course.
+# Only simple classes needed. We modify the data outside the class.
+#
+
 
 class Student:
     def __init__(self, student_id, pin, in_state, courses):
